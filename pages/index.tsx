@@ -103,6 +103,7 @@ export default function Home() {
 
       const txid = await wallet.sendTransaction(tx, connection, {
         signers: [mint],
+        skipPreflight=true
       })
 
       const latest = await connection.getLatestBlockhash()
